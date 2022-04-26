@@ -2,6 +2,7 @@
 .topnav {
   background-color: #333;
   overflow: hidden;
+ 
 }
 
 /* Style the links inside the navigation bar */
@@ -12,7 +13,9 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
+  font-family: permanent-marker-pro,sans-serif;
+  font-style: italic;
 }
 
 /* Change the color of links on hover */
@@ -27,16 +30,11 @@
   color: white;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
 
 h1 {
 	font-family: permanent-marker-pro,sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	margin: 2px;
 	
 }
 
