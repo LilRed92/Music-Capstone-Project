@@ -127,3 +127,11 @@ h1 {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+.text {
+  font-family: permanent-marker-pro,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 2px;
+  font-size: 100px;
+}
