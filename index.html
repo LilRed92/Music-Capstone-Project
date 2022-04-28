@@ -5,58 +5,60 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="https://use.typekit.net/uin5qbm.css">
-	<title>Insert Name Here</title>
+	<title>Xeystroke - Home</title>
   </head>
-	
-	<h1>Xeystroke</h1>
-  
-  <div class="topnav" id="myTopnav">
-	<a href="index.html" class="active">Home</a>
-	<a href="collaborate.html">Collaborate</a>
-	<a href="chords.html">Chords</a>
-	<a href="about.html">About</a>
-	<a href="notes.html">Notes</a>
-	
-	  
-	</a>
-  </div> 
-	  <h1>Xeystroke</h1>
+	  <!--Moved the <header> into the <body> Was it showing up with it being between the <head> and <body>?-->
   <body>
-	  
+	<header>
+		<h1>Xeystroke</h1>
+
+		<div class="topnav" id="myTopnav">
+		  <a href="index.html" class="active">Home</a>
+		  <a href="collaborate.html">Collaborate</a>
+		  <a href="chords.html">Chords</a>
+		  <a href="about.html">About</a>
+		  <a href="profile.html">Profile</a>
+		</div>
+	</header>
+
 	  <!-- Slideshow container -->
 	  <div class="slideshow-container">
-	  
-		
+
+
 		<div class="mySlides fade">
-		  <img src="images/img1.jpg" style="width:100%">
+		  <img src="images/img1.jpg" style="width:100%" alt="Image 1">
 		  <div class="text">Listen</div>
 		</div>
-		  
-	  
+
+
 		<div class="mySlides fade">
-		  <img src="images/img2.jpg" style="width:100%">
+		  <img src="images/img2.jpg" style="width:100%"alt="Image 2">
 		  <div class="text">Create</div>
 		</div>
-		  
-	  
+
+
 		<div class="mySlides fade">
-		  <img src="images/img3.jpg" style="width:100%">
+		  <img src="images/img3.jpg" style="width:100%" alt="Image 3">
 		  <div class="text">Collaborate</div>
 		</div>
-		  
+
+
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
 	  </div>
 	  <br>
-	  
+
 	  <!-- dots/circles -->
 	  <div style="text-align:center">
 		<span class="dot" onclick="currentSlide(1)"></span>
 		<span class="dot" onclick="currentSlide(2)"></span>
 		<span class="dot" onclick="currentSlide(3)"></span>
 	  </div>
-	  
-	
-	
-	
+
+	  <button class="controls" id="pause">Pause</button>
+
+
 	<script src="script.js"></script>
   </body>
 </html>
