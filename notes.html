@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://use.typekit.net/uin5qbm.css">
+	<title>Xeystroke - Home</title>
+  </head>
+	  <!--Moved the <header> into the <body> Was it showing up with it being between the <head> and <body>?-->
+  <body>
+	<header>
+		<h1>Xeystroke</h1>
+
+		<div class="topnav" id="myTopnav">
+		  <a href="index.html" class="active">Home</a>
+		  <a href="collaborate.html">Collaborate</a>
+		  <a href="chords.html">Chords</a>
+		  <a href="about.html">About</a>
+		  <a href="profile.html">Profile</a>
+		  <a href="notes.html">Notes</a>
+		</div>
+	</header>
+	
+<h2>Notes Index</h2>
+	
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for notes.." title="Type in a note!">
+	
+	<table id="myTable">
+	  <tr class="header">
+		<th style="width:60%;">Note</th>
+		<th style="width:40%;">Info</th>
+	  </tr>
+	  <tr>
+		<td>A#</td>
+		<td>A# is blah blah vlah, blah, blahlah!</td>
+	  </tr>
+	  <tr>
+		<td>A</td>
+		<td>Regular Old A</td>
+	  </tr>
+	  <tr>
+		<td>A Flat</td>
+		<td>Wheres the keyboard key for flat?</td>
+	  </tr>
+	  
+	</table>
+	
+	<script>
+	function myFunction() {
+	  var input, filter, table, tr, td, i, txtValue;
+	  input = document.getElementById("myInput");
+	  filter = input.value.toUpperCase();
+	  table = document.getElementById("myTable");
+	  tr = table.getElementsByTagName("tr");
+	  for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[0];
+		if (td) {
+		  txtValue = td.textContent || td.innerText;
+		  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			tr[i].style.display = "";
+		  } else {
+			tr[i].style.display = "none";
+		  }
+		}       
+	  }
+	}
+	</script>
+
+	
+	
+	
+	
+	
+  </body>
+</html>
