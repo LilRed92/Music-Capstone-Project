@@ -143,27 +143,40 @@ body {
 }
 
 #myInput {
-  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 100%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
+  width: 25%;
+  font-size: 16px; /
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
+  
 }
 
 #myTable {
   border-collapse: collapse; /* Collapse borders */
-  width: 100%; /* Full-width */
+  width: 35%; /* Full-width */
   border: 1px solid #ddd; /* Add a grey border */
   font-size: 18px; /* Increase font-size */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: grey;
+  
+}
+
+.search-bar {
+  text-align: center;
 }
 
 #myTable th, #myTable td {
-  text-align: left; /* Left-align text */
-  padding: 12px; /* Add padding */
+  text-align: left;
+  padding: 5px;
+  color: #1ce783; 
+  font-family: permanent-marker-pro,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
 
 #myTable tr {
   /* Add a bottom border to all table rows */
@@ -172,5 +185,26 @@ body {
 
 #myTable tr.header, #myTable tr:hover {
   /* Add a grey background color to the table header and on hover */
-  background-color: #f1f1f1;
+  background-color: black;
+}
+
+#myTable td {
+  color: #1ce783;
+  font-family: permanent-marker-pro,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  
+}
+
+
+.notes-index-header {
+  color: yellow;
+  font-family: permanent-marker-pro,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  margin-bottom: 0px;
+  margin-top: -30px;
+  text-align: center;
 }
