@@ -8,10 +8,10 @@
 	
 	<title>Xeystroke - Home</title>
   </head>
-	  <!--Moved the <header> into the <body> Was it showing up with it being between the <head> and <body>?-->
+	
   <body>
-	<header>
-		<h1>Xeystroke</h1>
+	
+		
 
 		<div class="topnav" id="myTopnav">
 		  <a href="index.html" class="active">Home</a>
@@ -21,7 +21,7 @@
 		  <a href="profile.html">Profile</a>
 		  <a href="notes.html">Notes</a>
 		</div>
-	</header>
+	
 	
 <h2 class="notes-index-header">Notes Index</h2>
 	
@@ -140,15 +140,25 @@
 			
 	  
 	</table>
+	
+	<h3>Discussion Forum</h3>
+	
+	   <div class="comment-box">
+		<input type="text" id="comment-box" placeholder="Enter comment">
+		<button id="post">Post</button>
+		</div>
+		<ul id="unordered" class="unordered-list">
+		   
+	   </ul>
 
 	
 	<script>
 	function myFunction() {
 	  var input, filter, table, tr, td, i, txtValue;
 	  input = document.getElementById("myInput");
-	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
+	  filter = input.value.toUpperCase();
 	  for (i = 0; i < tr.length; i++) {
 		td = tr[i].getElementsByTagName("td")[0];
 		if (td) {
@@ -161,6 +171,18 @@
 		}       
 	  }
 	}
+	
+	var post= document.getElementById("post");
+	post.addEventListener('click', function(){
+		var commentBoxValue= document.getElementById("comment-box").value;
+	 
+		var li = document.createElement("li");
+		var text = document.createTextNode(commentBoxValue);
+		li.appendChild(text);
+		document.getElementById("unordered").appendChild(li);
+		document.getElementById("comment-box").value = "";
+	 
+	});
 	</script>
 
 	
