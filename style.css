@@ -1,6 +1,3 @@
-
-
-/* Add a black background color to the top navigation */
 /* Added a fixed position for the nav bar */
 .topnav {
   background-color: #333;
@@ -36,55 +33,44 @@
   background-color: #51a4e8;
   
 }
+/* End Nav Bar*/
+
+.slide-right {
+   width: 100%;
+   overflow: hidden;
+   margin-left: 400px;
+   max-width: 500px
+}
 
 
-h1 {
-	font-family: permanent-marker-pro,sans-serif;
-	font-weight: 400;
-	font-style: normal;
+
+.slide-right h2 {
+   animation: 2s slide-right;
+   animation-delay: 2s;
 
 }
 
-* {box-sizing:border-box}
+@keyframes slide-right {
+    from {
+       margin-left: -500px;
+    }
+
+    to {
+       margin-left: 0%;
+    }
+ }
 
 /* Slideshow container */
 .slideshow-container {
-  width: 100%;
+  width: 50%;
   position: relative;
   margin: auto;
 }
-
 /* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
 
 /* Caption text */
 .text {
@@ -243,5 +229,26 @@ body {
   margin-bottom: 0px;
   margin-top: -30px;
   text-align: center;
+}
+
+
+/*Comment Area*/
+.comment-box {
+  text-align: center;
+  
+}
+#comment-box, #post {
+    border: none;
+    border-radius: 5px;
+}
+#post:hover{
+    background-color: deeppink;
+}
+#unordered {
+  list-style: none;
+}
+.unordered-list {
+  background-color: yellow;
+  
 }
 
