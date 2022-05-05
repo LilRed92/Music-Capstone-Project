@@ -42,9 +42,12 @@
    max-width: 500px
 }
 
+
+
 .slide-right h2 {
    animation: 2s slide-right;
    animation-delay: 2s;
+
 }
 
 @keyframes slide-right {
@@ -103,6 +106,64 @@ body {
   background-color: #27679c;
 }
 
+/*COLLAB PAGE START*/
+#studio-menu {
+  height: 100px;
+  width: auto;
+  margin: 0;
+  padding: 15px;
+  background-color: #0D0D0D;
+  color: #B272F2;
+  display: flex;
+
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropbtn {
+  background-color: #0D0D0D;
+  border: none;
+  color: #B272F2;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 2px;
+  margin: 0;
+  padding: 10px;
+  display: inline-flex;
+  justify-content: start;
+}
+
+.studio-menu-btn {
+
+  background-color: #0D0D0D;
+  border: none;
+  color: #B272F2;
+  padding: 5px;
+   margin: 5px;
+}
+
+.dropbtn:hover {
+  background-color: #1ED9D9;
+  color: #0D0D0D;
+}
+
+.menu-project-info {
+  display: inline-flex;
+}
+
+#studio-menu-btns {
+  display: inline-flex;
+  justify-content: end;
+}
+
+
+.collaborator-profile {
+  display: none;
+}
+/*COLLAB PAGE END*/
+=======
 #myInput {
   background-position: 10px 12px; 
   background-repeat: no-repeat; 
@@ -170,6 +231,7 @@ body {
   text-align: center;
 }
 
+
 /*Comment Area*/
 .comment-box {
   text-align: center;
@@ -189,3 +251,4 @@ body {
   background-color: yellow;
   
 }
+
