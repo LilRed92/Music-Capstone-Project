@@ -171,8 +171,11 @@ body {
 }
 
 /*Comment Area*/
-.comment-box {
+.comment-input { 
   text-align: center;
+  border-color: yellow;
+  border-style: groove; 
+}
   
 }
 #comment-box, #post {
@@ -183,9 +186,13 @@ body {
     background-color: deeppink;
 }
 #unordered {
-  list-style: none;
+  list-style-type: upper-roman;
 }
-.unordered-list {
-  background-color: yellow;
-  
+
+
+.discussion-forum-top {
+  background: gray;
+  border-style: groove;
+  border-color: yellow;
+
 }

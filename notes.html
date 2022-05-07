@@ -141,15 +141,17 @@
 	  
 	</table>
 	
-	<h3>Discussion Forum</h3>
-	
-	   <div class="comment-box">
+	<h3 class="discussion-forum-top">Discussion Forum</h3>
+	   
+	   <div class="comment-input">
+		<ul id="unordered" class="unordered-list"></ul>
 		<input type="text" id="comment-box" placeholder="Enter comment">
+	
 		<button id="post">Post</button>
 		</div>
-		<ul id="unordered" class="unordered-list">
-		   
 	   </ul>
+	
+		   
 
 	
 	<script>
@@ -167,10 +169,19 @@
 			tr[i].style.display = "";
 		  } else {
 			tr[i].style.display = "none";
+			
 		  }
 		}       
 	  }
 	}
+	
+	const currentDate = new Date();
+	const currentDayOfMonth = currentDate.getDate();
+	const currentMonth = currentDate.getMonth(); 
+	const currentYear = currentDate.getFullYear();
+	const dateString = currentDayOfMonth + "-" + (currentMonth + 1) + "-" + currentYear;
+	
+	
 	
 	var post= document.getElementById("post");
 	post.addEventListener('click', function(){
@@ -179,8 +190,12 @@
 		var li = document.createElement("li");
 		var text = document.createTextNode(commentBoxValue);
 		li.appendChild(text);
+		var date = document.createTextNode(dateString);
+		li.appendChild(date) + "";
 		document.getElementById("unordered").appendChild(li);
 		document.getElementById("comment-box").value = "";
+		
+		
 	 
 	});
 	</script>
