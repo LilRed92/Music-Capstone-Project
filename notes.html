@@ -145,11 +145,12 @@
 	   
 	   <div class="comment-input">
 		<ul id="unordered" class="unordered-list"></ul>
-		<input type="text" id="comment-box" placeholder="Enter comment">
 	
-		<button id="post">Post</button>
 		</div>
 	   </ul>
+	   <p>Subject:<input type="text" placeholder=" Subject..." id="subject-box">
+		<p>Message:<input type="text" id="comment-box" placeholder=" Enter text here!" class="message-input-box"></p>
+		<button id="post">Post</button></p>
 	
 		   
 
@@ -175,7 +176,9 @@
 	  /* Start at "zero", when i is less than the length of table row, increment by 1 */
 	  for (i = 0; i < tr.length; i++) {
 		td = tr[i].getElementsByTagName("td")[0];
+		/* IF table data has a text value of True/False */
 		if (td) {txtValue = td.textContent || td.innerText;
+		/*  & IF the text value is greater than -1, meaning if there is info there, since we start at 0 display the value of table row */
 		  if (txtValue.toUpperCase().indexOf(filter) > -1) {
 			tr[i].style.display = "";
 		  } else {
@@ -194,11 +197,15 @@
 	
 	
 	
+	
 	var post= document.getElementById("post");
 	post.addEventListener('click', function(){
 		var commentBoxValue= document.getElementById("comment-box").value;
+		var subjectBoxValue= document.getElementById("subject-box").value;
 	 
 		var li = document.createElement("li");
+		var subject = document.createTextNode(" Subject: " + subjectBoxValue);
+		li.appendChild(subject);
 		var text = document.createTextNode(" Message: " + commentBoxValue + " ");
 		li.appendChild(text);
 		var date = document.createTextNode(dateString);

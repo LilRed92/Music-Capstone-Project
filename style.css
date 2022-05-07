@@ -187,6 +187,8 @@ body {
 }
 #unordered {
   list-style-type: square;
+  color: red;
+  background-color: black;
 }
 
 
@@ -195,4 +197,9 @@ body {
   border-style: groove;
   border-color: yellow;
 
+}
+
+.message-input-box {
+  background-color: black;
+  color: limegreen;
 }
