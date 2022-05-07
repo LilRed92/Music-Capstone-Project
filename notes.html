@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="https://use.typekit.net/uin5qbm.css">
 	
-	<title>Xeystroke - Home</title>
+	
   </head>
 	
   <body>
@@ -155,16 +155,27 @@
 
 	
 	<script>
+	
+	/* Search Bar */
 	function myFunction() {
+		/* First, I list my variables, and get the "text value" of those variables */
 	  var input, filter, table, tr, td, i, txtValue;
+	  /* Next, we go to the DOM to pull that info */
+	 
 	  input = document.getElementById("myInput");
+	  
 	  table = document.getElementById("myTable");
+	 
 	  tr = table.getElementsByTagName("tr");
+	  
+	  /* Creates a filter that translates value of "input" text to Uppercase text */
 	  filter = input.value.toUpperCase();
+	  
+	  /* Now initialize the for loop */
+	  /* Start at "zero", when i is less than the length of table row, increment by 1 */
 	  for (i = 0; i < tr.length; i++) {
 		td = tr[i].getElementsByTagName("td")[0];
-		if (td) {
-		  txtValue = td.textContent || td.innerText;
+		if (td) {txtValue = td.textContent || td.innerText;
 		  if (txtValue.toUpperCase().indexOf(filter) > -1) {
 			tr[i].style.display = "";
 		  } else {
@@ -174,12 +185,12 @@
 		}       
 	  }
 	}
-	
+	/* Begin Forum  */
 	const currentDate = new Date();
 	const currentDayOfMonth = currentDate.getDate();
 	const currentMonth = currentDate.getMonth(); 
 	const currentYear = currentDate.getFullYear();
-	const dateString = currentDayOfMonth + "-" + (currentMonth + 1) + "-" + currentYear;
+	const dateString = "Date: " + (currentMonth + 1) + "/" + currentDayOfMonth + "/" + currentYear;
 	
 	
 	
@@ -188,10 +199,10 @@
 		var commentBoxValue= document.getElementById("comment-box").value;
 	 
 		var li = document.createElement("li");
-		var text = document.createTextNode(commentBoxValue);
+		var text = document.createTextNode(" Message: " + commentBoxValue + " ");
 		li.appendChild(text);
 		var date = document.createTextNode(dateString);
-		li.appendChild(date) + "";
+		li.appendChild(date);
 		document.getElementById("unordered").appendChild(li);
 		document.getElementById("comment-box").value = "";
 		
