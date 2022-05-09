@@ -103,6 +103,67 @@ body {
   background-color: #27679c;
 }
 
+/*COLLAB PAGE START*/
+#studio-menu {
+  height: 100px;
+  width: auto;
+  margin: 0;
+  padding: 15px;
+  background-color: #0D0D0D;
+  color: #B272F2;
+  display: flex;
+
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropbtn {
+  background-color: #0D0D0D;
+  border: none;
+  color: #B272F2;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 2px;
+  margin: 0;
+  padding: 10px;
+  display: inline-flex;
+  justify-content: start;
+}
+
+.studio-menu-btn {
+
+  background-color: #0D0D0D;
+  border: none;
+  color: #B272F2;
+  padding: 5px;
+   margin: 5px;
+}
+
+.dropbtn:hover {
+  background-color: #1ED9D9;
+  color: #0D0D0D;
+}
+
+.menu-project-info {
+  display: inline-flex;
+}
+
+#studio-menu-btns {
+  display: inline-flex;
+  justify-content: end;
+}
+
+
+.collaborator-profile {
+  display: none;
+}
+/*COLLAB PAGE END*/
+=======
+
+/* Begin notes.html */
+
 #myInput {
   background-position: 10px 12px; 
   background-repeat: no-repeat; 
@@ -202,4 +263,47 @@ body {
 .message-input-box {
   background-color: black;
   color: limegreen;
+}
+
+#comment-overlay {
+  position: fixed;
+  display: none;
+  width: 50%;
+  height: 50%;
+  background-color: yellow;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Comment Overlay Style */
+
+.open-modal, #close-modal {
+  background-color: royalblue;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+#modal {
+  background-color: orange;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  height: 200px;
+  position: relative;
+  top: 30%;
+}
+
+#overlay {
+  display: none;
+  width: 100%;
+  height: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.3);
 }

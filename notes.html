@@ -148,9 +148,21 @@
 	
 		</div>
 	   </ul>
-	   <p>Subject:<input type="text" placeholder=" Subject..." id="subject-box">
-		<p>Message:<input type="text" id="comment-box" placeholder=" Enter text here!" class="message-input-box"></p>
-		<button id="post">Post</button></p>
+	   
+	   <div id="overlay">
+		   <div id="modal">
+			   <h4>Sucess!</h4>
+			   <p> Your comment has been posted.</p>
+	   		   <p>Subject:<input type="text" placeholder=" Subject..." id="subject-box"></p>
+		       <p>Message:<input type="text" id="comment-box" placeholder=" Enter text here!" class="message-input-box"></p>
+			 
+		       <button id="close-modal">Post</button>
+		   </div>
+	   </div>
+	   
+	   <h5>Click here to add to this thread.</h5>
+	   	<button id ="post">Create New</button>
+		
 	
 		   
 
@@ -198,7 +210,23 @@
 	
 	
 	
-	var post= document.getElementById("post");
+		
+		
+		function on() {
+		  document.getElementById("overlay").style.display = "block";
+		}
+		
+		function off() {
+		  document.getElementById("overlay").style.display = "none";
+		}
+		
+		
+		/* Begin Comment Overlay */
+		
+		document.getElementById("post").addEventListener("click", function(){
+		  document.getElementById("overlay").style.display = "block"
+		})
+	var post= document.getElementsById("post");
 	post.addEventListener('click', function(){
 		var commentBoxValue= document.getElementById("comment-box").value;
 		var subjectBoxValue= document.getElementById("subject-box").value;
@@ -213,7 +241,9 @@
 		document.getElementById("unordered").appendChild(li);
 		document.getElementById("comment-box").value = "";
 		
-		
+		document.getElementById("close-modal").addEventListener("click", function(){
+		  document.getElementById("overlay").style.display = "none"
+		})
 	 
 	});
 	</script>
