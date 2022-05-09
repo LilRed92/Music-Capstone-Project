@@ -147,7 +147,9 @@
 		<ul id="unordered" class="unordered-list"></ul>
 	
 		</div>
+	   
 	   </ul>
+	   
 	   
 	   <div id="overlay">
 		   <div id="modal">
@@ -156,12 +158,12 @@
 	   		   <p>Subject:<input type="text" placeholder=" Subject..." id="subject-box"></p>
 		       <p>Message:<input type="text" id="comment-box" placeholder=" Enter text here!" class="message-input-box"></p>
 			 
-		       <button id="close-modal">Post</button>
+		       <button id="post">Post</button>
 		   </div>
 	   </div>
 	   
 	   <h5>Click here to add to this thread.</h5>
-	   	<button id ="post">Create New</button>
+	   	<button id ="open-modal">Create New</button>
 		
 	
 		   
@@ -200,6 +202,9 @@
 		}       
 	  }
 	}
+	
+	
+	
 	/* Begin Forum  */
 	const currentDate = new Date();
 	const currentDayOfMonth = currentDate.getDate();
@@ -207,45 +212,35 @@
 	const currentYear = currentDate.getFullYear();
 	const dateString = "Date: " + (currentMonth + 1) + "/" + currentDayOfMonth + "/" + currentYear;
 	
-	
-	
-	
-		
-		
-		function on() {
-		  document.getElementById("overlay").style.display = "block";
-		}
-		
-		function off() {
-		  document.getElementById("overlay").style.display = "none";
-		}
 		
 		
 		/* Begin Comment Overlay */
 		
-		document.getElementById("post").addEventListener("click", function(){
+		document.getElementById("open-modal").addEventListener("click", function(){
 		  document.getElementById("overlay").style.display = "block"
 		})
-	var post= document.getElementsById("post");
-	post.addEventListener('click', function(){
-		var commentBoxValue= document.getElementById("comment-box").value;
-		var subjectBoxValue= document.getElementById("subject-box").value;
-	 
-		var li = document.createElement("li");
-		var subject = document.createTextNode(" Subject: " + subjectBoxValue);
-		li.appendChild(subject);
-		var text = document.createTextNode(" Message: " + commentBoxValue + " ");
-		li.appendChild(text);
-		var date = document.createTextNode(dateString);
-		li.appendChild(date);
-		document.getElementById("unordered").appendChild(li);
-		document.getElementById("comment-box").value = "";
 		
-		document.getElementById("close-modal").addEventListener("click", function(){
-		  document.getElementById("overlay").style.display = "none"
-		})
+		
+		  
 	 
+		document.getElementById("post").addEventListener("click", function(){
+		  document.getElementById("overlay").style.display = ("none")
 	});
+		  var post= document.getElementsById("post");
+		  post.addEventListener('click', function(){
+		  var commentBoxValue= document.getElementById("comment-box").value;
+		  var subjectBoxValue= document.getElementById("subject-box").value;
+		  
+		  var li = document.createElement("li");
+		  var subject = document.createTextNode(" Subject: " + subjectBoxValue);
+		  li.appendChild(subject);
+		  var text = document.createTextNode(" Message: " + commentBoxValue + " ");
+		  li.appendChild(text);
+		  var date = document.createTextNode(dateString);
+		  li.appendChild(date);
+		  document.getElementById("unordered").appendChild(li);
+		  document.getElementById("comment-box").value = "";
+		})
 	</script>
 
 	
