@@ -141,20 +141,18 @@
 	  
 	</table>
 	
+	   <div id="modal">
 	<h3 class="discussion-forum-top">Discussion Forum</h3>
-	   
 	   <div class="comment-input">
 		<ul id="unordered" class="unordered-list"></ul>
 	
 		</div>
-	   
 	   </ul>
-	   
 	   
 	   <div id="overlay">
 		   <div id="modal">
-			   <h4>Sucess!</h4>
-			   <p> Your comment has been posted.</p>
+			   <h4>Type your comment here:</h4>
+			   
 	   		   <p>Subject:<input type="text" placeholder=" Subject..." id="subject-box"></p>
 		       <p>Message:<input type="text" id="comment-box" placeholder=" Enter text here!" class="message-input-box"></p>
 			 
@@ -164,6 +162,10 @@
 	   
 	   <h5>Click here to add to this thread.</h5>
 	   	<button id ="open-modal">Create New</button>
+		   
+		   
+		   
+		   
 		
 	
 		   
@@ -225,7 +227,7 @@
 	 
 		document.getElementById("post").addEventListener("click", function(){
 		  document.getElementById("overlay").style.display = ("none")
-	});
+	
 		  var post= document.getElementsById("post");
 		  post.addEventListener('click', function(){
 		  var commentBoxValue= document.getElementById("comment-box").value;
@@ -241,6 +243,11 @@
 		  document.getElementById("unordered").appendChild(li);
 		  document.getElementById("comment-box").value = "";
 		})
+		
+		});
+		
+		
+	
 	</script>
 
 	
