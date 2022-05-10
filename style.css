@@ -146,22 +146,39 @@ body {
 /* Begin notes.html */
 
 
-#myInput { 
-  text-align: center;
+#myInput {
+  background-position: 10px 12px; 
+  background-repeat: no-repeat; 
+  width: 25%;
+  font-size: 16px; /
+  padding: 12px 20px 12px 40px; 
+  border: 1px solid #ddd; 
   margin-bottom: 12px;
   
 }
-
 #myTable {
   border-collapse: collapse; 
   width: 35%; 
-  
+  border: 1px solid #ddd; 
   font-size: 18px; 
   margin-left: auto;
   margin-right: auto;
   background-color: grey;
-  border-radius: 50px;
   
+}
+
+.search-bar {
+  text-align: center;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 5px;
+  color: #1ce783; 
+  font-family: permanent-marker-pro,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 }
 
 
