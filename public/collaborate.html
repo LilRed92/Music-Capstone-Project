@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://use.typekit.net/uin5qbm.css">
+	<script src="https://kit.fontawesome.com/40c0d38452.js" crossorigin="anonymous"></script>
+	<title>Xeystroke - Collaborate</title>
+  </head>
+	  <!--Moved the <header> into the <body> Was it showing up with it being between the <head> and <body>?-->
+  <body>
+	<header>
+
+
+		<div class="topnavalt" id="myTopnav">
+		  <a href="index.html">Home</a>
+		  <a href="collaborate.html" class= "active" id="collabButton">Collaborate</a>
+		  <a href="chords.html">Chords Finder</a>
+		  <a href="about.html">About</a>
+		  <a href="profile.html">Profile</a>
+      <a href="notes.html">Notes</a>
+		</div>
+	</header>
+
+	<div id="studio-container" class="studio">
+		<div id="studio-menu" class="studio-menu">
+
+	<!--MENU DROP DOWNS-->
+			<div id="studio-dropdowns">
+				<button class="dropbtn">File</button>
+					<div class="dropdown-content">
+						<a href="#">New...</a>
+						<a href="#">Open</a>
+						<a href="#">Open Recent...</a>
+						<span class="menu-divider"></span>
+						<a href="#">Save</a>
+						<a href="#">Save As...</a>
+						<a href="#">Export</a>
+						<a href="#">Share</a>
+						<span class="menu-divider"></span>
+						<a href="#">Exit Studio</a>
+					</div>
+
+				<button class="dropbtn">Edit</button>
+				<div class="dropdown-content">
+					<a href="#">Undo</a>
+					<a href="#">Redo</a>
+					<span class="menu-divider"></span>
+					<a href="#">Split</a>
+					<a href="#">Merge</a>
+					<a href="#">Mute</a>
+					<a href="#">Cut</a>
+					<a href="#">Copy</a>
+					<a href="#">Paste</a>
+					<span class="menu-divider"></span>
+					<a href="#">Add</a>
+					<a href="#">Delete</a>
+				</div>
+
+				<button class="dropbtn">Settings</button>
+				<div class="dropdown-content">
+					<a href="#">...</a>
+					<a href="#">...</a>
+					<span class="menu-divider"></span>
+					<a href="#">...</a>
+					<a href="#">...</a>
+					<a href="#">...</a>
+					<a href="#">...</a>
+					<a href="#">...</a>
+					<a href="#">...</a>
+					<span class="menu-divider"></span>
+					<a href="#">...</a>
+					<a href="#">...</a>
+				</div>
+
+
+			</div>
+
+			<div id="menu-project-info">
+				<h2 id="studio-project-name">[Name of Project]</h2>
+
+				<div id="studio-collaborators">
+					<i class="fa-solid fa-users"></i>
+					<a href="#" class="collaborator-profile">[Person One]</a>
+					<a href="#" class="collaborator-profile">[Person Two]</a>
+				</div>
+
+				<h5 id="studio-project-time">
+					00:00:00</h5>
+			</div>
+
+
+
+			<div id="studio-menu-btns">
+				<button id="undo" class="studio-menu-btn"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+
+				<button id="redo" class="studio-menu-btn"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+
+				<button id="save" class="studio-menu-btn"><i class="fa-solid fa-floppy-disk"></i></button>
+
+				<button id="download" class="studio-menu-btn"><i class="fa-regular fa-download"></i></button>
+
+				<button id="share" class="studio-menu-btn"><i class="fa-solid fa-share-nodes"></i></button>
+
+				<button id="help" class="studio-menu-btn"><i class="fa-regular fa-question"></i></button>
+
+				<button id="exit" class="studio-menu-btn"><i class="fa-regular fa-person-to-portal"></i></button>
+			</div>
+
+		</div>
+
+
+
+		<div id="studio-main" class="studio-container">
+
+	<!--TRACKS ON DECK-->
+		<div id="studio-tracks" class="studio-body">
+
+			<div id="empty-track-area" class="no-loaded-tracks">
+				<h6>Load your first track!</h6>
+			</div>
+
+			<div id="first-track" class="tracks"></div>
+
+			<div id="second-track" class="tracks"></div>
+
+			<div id="third-track" class="tracks"></div>
+
+			<div id="fourth-track" class="tracks"></div>
+
+			<div id="fifth-track" class="tracks"></div>
+
+			<div id="sixth-track" class="tracks"></div>
+
+			<div id="seventh-track" class="tracks"></div>
+
+			<div id="eighth-track" class="tracks"></div>
+		</div>
+
+
+	<!--VERSION HISTORY-->
+
+
+	<!--PROJECT FILES-->
+
+
+	<!--INSTRUMENT CONTROLS-->
+		<div class="studio-body" id="instrus-ctrls-constainer">
+<!--PIANO-KEYBOARD-->
+			<div class="instrument" id="piano">
+				<h2>Synth Piano</h2>
+				<div id="piano-scroll" class="piano-container">
+					<div id="keyboard" class="keyboard"></div>
+				</div>
+
+				<div class="settingsBar">
+					<div class="left">
+						<span>Volume: </span>
+						<input type="range" min="0.0" max="1.0" step="0.01" value="0.5" list="volumes" name="volume">
+						<datalist id="volumes">
+							<option value="0.0" label="Mute">
+							<option value="1.0" label="100%">
+						</datalist>
+					</div>
+
+					<div class="right">
+						<span>Current waveform:</span>
+						<select name="waveform">
+							<option value="sine">Sine</option>
+							<option value="square">Square</option>
+							<option value="sawtooth">Sawtooth</option>
+							<option value="triangle">Triangle</option>
+							<option value="custom">Custom</option>
+						</select>
+					</div>
+				</div>
+
+
+		</div>
+
+		</div>
+<!--DRUMS-->
+			<div class="instrument" id="drums">
+			</div>
+<!--SEQUENCER-->
+			<div class="instrument" id="sequencer">
+			</div>
+<!--EQ & OTHER ADJUSTMENTS-->
+			<div class="instrument" id="eq-adjustments">
+			</div>
+
+
+	</div>
+
+	<div id="communication-container" class="chat-video">
+
+	</div>
+
+	<script src="script.js"></script>
+	<script src="index.js"></script>
+	<script src="public/qwerty-hancock.js"></script>
+	<script src="public/synth.js"></script>
+  </body>
+</html>
