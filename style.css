@@ -359,4 +359,74 @@ body {
   border:2px solid #333;
   padding: 5px;
 }
+/*Chords CSS ends here*/
 
+/* About US css below here */
+.profileMain{
+  display: flex;
+}
+
+.teamIntro{
+  background-color: #444444;
+  border-radius: 5px;
+  font-size: 24px;
+  width: 275px;
+  margin: 100px auto 10px auto;
+  text-align: center;
+  border:1px solid mintcream;
+  font-family: permanent-marker-pro,sans-serif;
+}
+
+.teamTitle{
+  color: #51a4e8;
+
+}
+
+.aboutUs, .feedback{
+  min-width: 275px;
+  margin: 0 auto;
+  width: 690px;
+  color: mintcream;
+  background-color: #444444;
+  border-radius: 15px;
+  font-size: 24px;
+  text-align: center;
+  border:1px solid mintcream;
+  font-family: permanent-marker-pro,sans-serif;
+  padding: 5px;
+}
+
+#aboutUs{
+  color: #51a4e8;
+}
+
+
+
+
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 15px 0 0;
+  display: inline-block;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.submitButton {
+  width: 50%;
+  background-color: #51a4e8;
+  color:#444;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+a{
+  color: #51a4e8;
+}
+a:focus{
+  color: mintcream;
+}
+/* About US css ends here */

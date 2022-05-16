@@ -13,7 +13,7 @@ function selectRoot() {
 selectRoot()
 // get user input and fills the three rows
 function chordFillTop() {
-    var rootValue = document.getElementById("rootSelect").value;
+    let rootValue = document.getElementById("rootSelect").value;
     let topChords = chordNotes[rootValue].secDom
 
     document.getElementById("topChords").innerHTML = topChords.map(function(topChords) {
@@ -21,14 +21,14 @@ function chordFillTop() {
     }).join(" ")
 }
 function chordFillMid() {
-    var rootValue = document.getElementById("rootSelect").value;
+    let rootValue = document.getElementById("rootSelect").value;
     let midChords = chordNotes[rootValue].root
     document.getElementById("midChords").innerHTML = midChords.map(function(midChords) {
         return `<div id="midRow">${midChords}</div>`
     }).join(" ")
 }
 function chordFillBott() {
-    var rootValue = document.getElementById("rootSelect").value;
+    let rootValue = document.getElementById("rootSelect").value;
     let bottChords = chordNotes[rootValue].mInt
     document.getElementById("bottChords").innerHTML = bottChords.map(function(bottChord) {
         return `<div id="bottRow">${bottChord}</div>`
