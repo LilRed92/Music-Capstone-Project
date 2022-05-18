@@ -86,7 +86,7 @@
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 @keyframes fade {
@@ -162,6 +162,7 @@ body {
 .collaborator-profile {
   display: none;
 }
+
 /*COLLAB PAGE END*/
 /*=======*/
 #myInput {
@@ -193,7 +194,7 @@ body {
 #myTable th, #myTable td {
   text-align: left;
   padding: 5px;
-  color: #1ce783; 
+  color: #51a4e8;
   font-family: permanent-marker-pro,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -291,14 +292,17 @@ body {
   border: 2px solid #ddd;
   background-image: url("./images/rowBackground.jpg");
 }
-
+#topRow{
+  position:relative; bottom:-10px;
+}
 #midRow{
   position:relative; right:45px;
+  position:relative; bottom:-5px;
 }
 
 #bottRow{
   position:relative; right:185px;
-  position:relative; bottom:20px;
+  position:relative; bottom:10px;
 }
 
 #bottRow:nth-child(1) {
@@ -319,7 +323,7 @@ body {
 /* instruction button */
 .howTo{
   border-radius: 5px;
-  margin: 0 0 0 700px;
+  margin: 0 0 0 650px;
 }
 
 /* root select and instruction button container */
@@ -410,7 +414,7 @@ input[type=text] {
 
 .submitButton {
   width: 50%;
-  background-color: #51a4e8;
+  background-color: #1ce783;;
   color:#444;
   padding: 14px 20px;
   margin: 10px 0;
