@@ -6,21 +6,17 @@
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="https://use.typekit.net/uin5qbm.css">
 	
-	<title>Xeystroke - Home</title>
+	
   </head>
 	
   <body>
-	
-		
-
-		<div class="topnav" id="myTopnav">
-		  <a href="index.html" class="active">Home</a>
-		  <a href="collaborate.html">Collaborate</a>
-		  <a href="chords.html">Chords</a>
-		  <a href="about.html">About</a>
-		  <a href="profile.html">Profile</a>
-		  <a href="notes.html">Notes</a>
-		</div>
+  <div class="topnav" id="myTopnav">
+	  <a href="index.html" class="active">Home</a>
+	  <a href="collaborate.html">Collaborate</a>
+	  <a href="chords.html">Chords</a>
+	  <a href="notes.html">Notes</a>
+	  <a href="about.html">About</a>
+  </div>
 	
 	
 <h2 class="notes-index-header">Notes Index</h2>
@@ -140,55 +136,116 @@
 			
 	  
 	</table>
+
+	   <div id="modal">
+	<h3 class="discussion-forum-top">Discussion Forum</h3>
+	   <div class="comment-input">
+		<ul id="unordered" class="unordered-list"></ul>
 	
-	<h3>Discussion Forum</h3>
-	
-	   <div class="comment-box">
-		<input type="text" id="comment-box" placeholder="Enter comment">
-		<button id="post">Post</button>
 		</div>
-		<ul id="unordered" class="unordered-list">
-		   
 	   </ul>
+	   
+	   <div id="overlay">
+		   <div id="modal">
+			   <h4>Type your comment here:</h4>
+			   
+	   		   <p>Subject:<input type="text" placeholder=" Subject..." id="subject-box"></p>
+		       <p>Message:<input type="text" id="comment-box" placeholder=" Enter text here!" class="message-input-box"></p>
+			 
+		       <button id="post">Post</button>
+		   </div>
+	   </div>
+	   
+	   <h5>Click here to add to this thread.</h5>
+	   	<button id ="open-modal">Create New</button>
+		   
+		   
+		   
+		   
+		
+	
+		   
 
 	
 	<script>
+	
+	/* Search Bar */
 	function myFunction() {
+		/* First, I list my variables, and get the "text value" of those variables */
 	  var input, filter, table, tr, td, i, txtValue;
+	  /* Next, we go to the DOM to pull that info */
+	 
 	  input = document.getElementById("myInput");
+	  
 	  table = document.getElementById("myTable");
+	 
 	  tr = table.getElementsByTagName("tr");
+	  
+	  /* Creates a filter that translates value of "input" text to Uppercase text */
 	  filter = input.value.toUpperCase();
+	  
+	  /* Now initialize the for loop */
+	  /* Start at "zero", when i is less than the length of table row, increment by 1 */
 	  for (i = 0; i < tr.length; i++) {
 		td = tr[i].getElementsByTagName("td")[0];
-		if (td) {
-		  txtValue = td.textContent || td.innerText;
+		/* IF table data has a text value of True/False */
+		if (td) {txtValue = td.textContent || td.innerText;
+		/*  & IF the text value is greater than -1, meaning if there is info there, since we start at 0 display the value of table row */
 		  if (txtValue.toUpperCase().indexOf(filter) > -1) {
 			tr[i].style.display = "";
 		  } else {
 			tr[i].style.display = "none";
+			
 		  }
 		}       
 	  }
 	}
 	
-	var post= document.getElementById("post");
-	post.addEventListener('click', function(){
-		var commentBoxValue= document.getElementById("comment-box").value;
+	
+	
+	/* Begin Forum  */
+	const currentDate = new Date();
+	const currentDayOfMonth = currentDate.getDate();
+	const currentMonth = currentDate.getMonth(); 
+	const currentYear = currentDate.getFullYear();
+	const dateString = "Date: " + (currentMonth + 1) + "/" + currentDayOfMonth + "/" + currentYear;
+	
+		
+		
+		/* Begin Comment Overlay */
+		
+		document.getElementById("open-modal").addEventListener("click", function(){
+		  document.getElementById("overlay").style.display = "block"
+		})
+		
+		
+		  
 	 
-		var li = document.createElement("li");
-		var text = document.createTextNode(commentBoxValue);
-		li.appendChild(text);
-		document.getElementById("unordered").appendChild(li);
-		document.getElementById("comment-box").value = "";
-	 
-	});
+		document.getElementById("post").addEventListener("click", function(){
+		  document.getElementById("overlay").style.display = ("none")
+	
+		  var post= document.getElementsById("post");
+		  post.addEventListener('click', function(){
+		  var commentBoxValue= document.getElementById("comment-box").value;
+		  var subjectBoxValue= document.getElementById("subject-box").value;
+		  
+		  var li = document.createElement("li");
+		  var subject = document.createTextNode(" Subject: " + subjectBoxValue);
+		  li.appendChild(subject);
+		  var text = document.createTextNode(" Message: " + commentBoxValue + " ");
+		  li.appendChild(text);
+		  var date = document.createTextNode(dateString);
+		  li.appendChild(date);
+		  document.getElementById("unordered").appendChild(li);
+		  document.getElementById("comment-box").value = "";
+		})
+		
+		});
+		
+		
+	
 	</script>
 
-	
-	
-	
-	
-	
+
   </body>
 </html>
