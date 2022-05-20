@@ -1,4 +1,9 @@
+body {
+  background-color: #27679c;
+
+
 /* Added a fixed position for the nav bar */
+}
 .topnav {
   background-color: #333;
   overflow: hidden;
@@ -8,6 +13,7 @@
   left: 0;
   z-index:1;
 }
+
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -22,25 +28,23 @@
   font-style: italic;
 }
 
+
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
+
 /* Add an active class to highlight the current page */
 .topnav a:active {
   background-color: #51a4e8;
   
 }
-/* End Nav Bar*/
 
-.slide-right {
-   width: 100%;
-   overflow: hidden;
-   margin-left: 400px;
-   max-width: 500px
-}
+
+
+/* End Nav Bar*/
 
 
 
@@ -50,38 +54,31 @@
 
 }
 
-@keyframes slide-right {
-    from {
-       margin-left: -500px;
-    }
+
+
+
 
     to {
        margin-left: 0;
     }
  }
 
+
 /* Slideshow container */
 .slideshow-container {
   width: 50%;
   position: relative;
-  margin: auto;
+  margin-left: 385px;
+  margin-right: 0px;
+  margin-top: 100px;
 }
+
 /* Hide the images by default */
 .mySlides {
   display: none;
 }
 
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
 
 /* Fading animation */
 .fade {
@@ -100,11 +97,48 @@
   font-style: normal;
   margin: 2px;
   font-size: 100px;
+  text-align: center;
 }
 
-body {
-  background-color: #27679c;
+
+/*COLLAB PAGE START*/
+#studio-menu {
+  height: 100px;
+  width: auto;
+  margin: 0;
+  padding: 15px;
+  background-color: #0D0D0D;
+  color: #B272F2;
+  display: flex;
+
 }
+
+.dropdown-content {
+  display: none;
+}
+
+.dropbtn {
+  background-color: #0D0D0D;
+  border: none;
+  color: #B272F2;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 2px;
+  margin: 0;
+  padding: 10px;
+  display: inline-flex;
+  justify-content: start;
+}
+
+.studio-menu-btn {
+
+  background-color: #0D0D0D;
+  border: none;
+  color: #B272F2;
+  padding: 5px;
+   margin: 5px;
+}
+
 
 /*COLLAB PAGE START*/
 #studio-menu {
@@ -164,7 +198,10 @@ body {
 }
 
 /*COLLAB PAGE END*/
-/*=======*/
+
+
+
+/* Begin notes.html */
 #myInput {
   background-position: 10px 12px; 
   background-repeat: no-repeat; 
@@ -175,7 +212,6 @@ body {
   margin-bottom: 12px;
   
 }
-
 #myTable {
   border-collapse: collapse; 
   width: 35%; 
@@ -199,26 +235,21 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
-
-#myTable tr {
-  /* Add a bottom border to all table rows */
-  border-bottom: 1px solid #ddd;
 }
+
+
+
+
+
+
 
 #myTable tr.header, #myTable tr:hover {
   /* Add a grey background color to the table header and on hover */
-  background-color: black;
-}
-
-#myTable td {
-  color: #1ce783;
-  font-family: permanent-marker-pro,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-
   
+  background-color: aqua;
+ 
 }
+
 
 
 .notes-index-header {
@@ -227,30 +258,74 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 50px;
-  margin-bottom: 0;
-  margin-top: -30px;
+
+  margin-bottom: 0px;
+  margin-top: 100px;
+
+ 
   text-align: center;
 }
 
 
 /*Comment Area*/
-.comment-box {
+.comment-input { 
   text-align: center;
+  border-color: yellow;
+  border-style: groove; 
+}
   
 }
-#comment-box, #post {
-    border: none;
-    border-radius: 5px;
-}
+
 #post:hover{
     background-color: deeppink;
 }
+
 #unordered {
-  list-style: none;
+  list-style-type: square;
+  color: red;
+  background-color: black;
 }
-.unordered-list {
+
+
+.discussion-forum-top {
+  background: gray;
+  border-style: groove;
+  border-color: yellow;
+  border-width: 10px;
+}
+
+
+input {
+  background-color: black;
+  color: limegreen;
+}
+
+#comment-overlay {
+  position: fixed;
+  display: none;
+  width: 50%;
+  height: 50%;
   background-color: yellow;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Comment Overlay Style */
+
+#open-modal, #close-modal {
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+}
   
+
+#modal {
+
+}
+
+
 }
 
 
@@ -428,4 +503,5 @@ a{
 a:focus{
   color: mintcream;
 }
-/* About US css ends here */
+
+
