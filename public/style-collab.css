@@ -1,0 +1,554 @@
+body {
+  background-color: #333;
+  color: #B272F2;
+}
+
+.inactive {
+  display: none;
+}
+
+.file-content.active, .edit-content.active, .menu-settings-content.active {
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+  margin-left: -65px;
+  padding: 5px;
+  z-index: 1;
+  background-color: #63DD83;
+  height: 225px;
+  width: 75px;
+  text-align: left;
+
+}
+
+.file-content a, .edit-content a, .menu-settings-content a{
+    color: #333;
+    font-size: 12px;
+
+    padding: 7px;
+    text-decoration: none;
+}
+
+hr {
+  margin:0;
+  width: 35px;
+  border-top: 2px solid #333;
+}
+
+/*COLLAB PAGE START*/
+#studio-menu {
+  height: 30px;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 15px 55px;
+  background-color: #444;
+  color: #B272F2;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.studio-container {
+
+}
+
+#studio-dropdowns {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  align-content: center;
+}
+
+.dropbtn {
+  background-color: #333;
+  border: none;
+  color: #B272F2;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 10px;
+  margin: 5px;
+  align-self: center;
+
+}
+
+.dropbtn:hover {
+  background-color: #1AD9D8;
+  color: #333;
+}
+
+
+
+#menu-project-info {
+  display: flex;
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 10px;
+  flex-direction: row;
+  justify-self: center;
+}
+
+.project-info {
+  color: #B272F2;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 5px;
+  margin: 5px;
+  align-self: center;
+
+}
+
+.collaborator-profile {
+  display: none;
+}
+
+.studio-menu-btn {
+    background-color: #333;
+    border: none;
+    color: #B272F2;
+    font-weight: 400;
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 5px;
+    align-self: center;
+}
+
+#studio-menu-btns {
+  display: flex;
+  flex: 1 1 auto;
+  justify-self: end;
+  flex-direction: row;
+  margin: 5px 15px 5px 0;
+}
+
+#audioFileListContainer {
+  display: flex;
+  float: right;
+  width: 300px;
+  justify-self: end;
+  align-self: end;
+  margin-left: 30px;
+}
+
+/*Studio Body*/
+.studio-body {
+  background-color: #444;
+  width: 1000px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+
+}
+#top-interface {
+  background-color: #333;
+  margin: 10px;
+  padding: 20px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.tracks-files-list {
+  height: 300px;
+}
+
+#instrus-ctrls-constainer {
+background-color: #333;
+margin: 10px;
+padding: 20px;
+}
+
+#deckTracks {
+  height: 200px;
+  width: 100%;
+  display: flex;
+}
+
+.no-loaded-tracks {
+  width: 100%;
+  height: 200px;
+  margin: 15px;
+  display: flex;
+}
+
+#ctrlsBar {
+  height: 50px;
+  width: 400px;
+  display: flex;
+  margin: 50px 15px;
+
+}
+.audio-ctrls {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+#volume {
+  height: 7px;
+  display: flex;
+  flex: 1 1 auto;
+  justify-self: start;
+}
+
+#song-ctrl-btns{
+  height: 15px;
+  justify-self: end;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+
+#bottom-interface {
+  background-color: #333;
+  margin: 10px;
+  padding: 20px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*.instruments {
+
+}
+
+
+
+.instruments .instrument-item, .instruments .instrument-item-hidden {
+  display: none;
+}
+
+.instruments .instrument-item-visible {
+  display: block;
+
+}
+
+.instruments .instruments-actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-90%);
+}
+
+.instruments .instruments-actions button {
+  border-radius: 50px;
+  background-color: white;
+  border: 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.instruments .instruments-actions button#instruments-button-prev {
+  margin-left: 20px;
+}
+
+.instruments .instruments-actions button#instruments-button-next {
+  margin-right: 20px;
+}*/
+
+
+
+#interactive {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin: auto;
+  height: 600px;
+
+}
+
+h6 {
+  margin: 5px;
+  font-size: 16px;
+}
+
+input {
+  height: 5px;
+}
+
+label {
+  font-size: 14px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.checkbox {
+  padding: 10px;
+  font-size: 16px;
+  height: 15px;
+}
+
+#midiDevicesSelector {
+  height: 20px;
+}
+
+#midi-select {
+  padding: 15px;
+}
+
+#settings {
+  display: flex;
+  height: 150px;
+  color: #B272F2;
+  margin: 30px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.settingsElems {
+
+  display: flex;
+
+
+}
+
+.containers-settings {
+  margin: 5px;
+}
+
+.infoTextContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainSettingsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 18px;
+  margin: 15px;
+}
+
+.ampEnvelopeContainer {
+  display: flex;
+  flex-direction: column;
+  height: 18px;
+  margin: 15px;
+}
+
+.filterSettingsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 18px;
+  margin: 15px;
+}
+
+#sync-retrig  {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+span {
+  font-size: 10px;
+}
+
+.mainFilterSyncCheboxContainer .checkmarkMainFilterSync {
+  margin: 0 auto;
+}
+
+.mainFilterRetrigCheboxContainer {
+  margin: 0 15px;
+}
+
+.delaySettingsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 18px;
+  margin: 15px;
+
+}
+
+.midiSettingsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 18px;
+  margin: 15px;
+
+}
+
+.pitchBendSettingsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 18px;
+
+
+}
+
+#instruments {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.inactive {
+  display: none;
+}
+
+.up-octave-arrows.active, .dwn-octave-arrows.active {
+  border: none;
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+#dwnOctaveArrows {
+  /*margin-left: 25%;*/
+  justify-self: start;
+  padding: 10px;
+  align-self: center;
+  background-color: rgba(0, 0, 0, .02);
+
+}
+
+#upOctaveArrows {
+  padding: 10px;
+  justify-self: end;
+  align-self: center;
+  background-color: rgba(0, 0, 0, .02);
+}
+
+i {
+  font-size: 20px;
+
+}
+.keyboardContainer {
+  width: 750px;
+  height: 300px;
+  margin: 20px;
+
+
+}
+
+/*.oscilloscopeContainer {
+  width: 200px;
+  height: 300px;
+  top: 450px;
+  left: 750px;
+}*/
+
+/*Instruments & Controls
+.piano-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 660px;
+  height: 110px;
+  white-space: nowrap;
+  margin: 10px;
+}
+
+.keyboard {
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.key {
+  cursor: pointer;
+  font: 16px "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  border: 1px solid  black;
+  border-radius: 5px;
+  width: 20px;
+  height: 80px;
+  text-align: center;
+  box-shadow: 2px 2px darkgray;
+  display: inline-block;
+  position: relative;
+  margin-right: 3px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.key div {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  cursor: none;
+}
+
+.key div sub {
+  font-size: 10px;
+  cursor: none;
+}
+
+.key:hover {
+   background-color: #eef;
+}
+
+.key:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.octave {
+  display: inline-block;
+  padding: 0 6px 0 0 ;
+}
+*/
+
+.settingsBar {
+  padding-top: 8px;
+  font: 14px "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+  height: 30px;
+}
+
+.left {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.left span, .left input {
+  vertical-align: middle;
+}
+
+.right {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.right span {
+  vertical-align: middle;
+}
+
+.right input {
+  vertical-align: middle;
+}
+
+
+#togetherjs-dock.togetherjs-dock-right {
+  padding: 0;
+  bottom: 150px;
+  border-radius: 4px;
+  height: 260px;
+  width: 60px;
+}
+

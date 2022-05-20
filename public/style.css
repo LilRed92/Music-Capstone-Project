@@ -1,0 +1,627 @@
+body {
+  background-color: #27679c;
+
+
+/* Added a fixed position for the nav bar */
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index:1;
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: permanent-marker-pro,sans-serif;
+  font-style: italic;
+}
+
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/* Add an active class to highlight the current page */
+.topnav a:active {
+  background-color: #51a4e8;
+
+}
+
+
+
+/* End Nav Bar*/
+
+
+
+.slide-right h2 {
+   animation: 2s slide-right;
+   animation-delay: 2s;
+
+}
+
+
+
+
+
+    to {
+       margin-left: 0;
+    }
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  width: 50%;
+  position: relative;
+  margin-left: 385px;
+  margin-right: 0px;
+  margin-top: 100px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.text {
+  font-family: permanent-marker-pro,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 2px;
+  font-size: 100px;
+  text-align: center;
+}
+
+
+/*COLLAB PAGE START*/
+#studio-menu {
+  height: 100px;
+  width: auto;
+  margin: 0;
+  padding: 15px;
+  background-color: #0D0D0D;
+  color: #B272F2;
+  display: flex;
+
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropbtn {
+  background-color: #0D0D0D;
+  border: none;
+  color: #B272F2;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 2px;
+  margin: 0;
+  padding: 10px;
+  display: inline-flex;
+  justify-content: start;
+}
+
+.studio-menu-btn {
+
+  background-color: #0D0D0D;
+  border: none;
+  color: #B272F2;
+  padding: 5px;
+   margin: 5px;
+}
+
+
+/*COLLAB PAGE START*/
+#studio-menu {
+  height: 110px;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  background-color: #333;
+  color: #B272F2;
+  display: inline-block;
+  left: 0;
+
+}
+
+.studio-container {
+  width: 800px;
+}
+
+.container-test {
+  margin: auto;
+  width: 800px;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropbtn {
+  background-color: #333;
+  border: none;
+  color: #B272F2;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 2px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+}
+
+.studio-menu-btn {
+
+  background-color: #333;
+  border: none;
+  color: #B272F2;
+  padding: 5px;
+   margin: 5px;
+}
+
+.dropbtn:hover {
+  background-color: #1ED9D9;
+  color: #333;
+}
+
+.menu-project-info {
+  display: inline-flex;
+}
+
+#studio-menu-btns {
+  display: inline-flex;
+  justify-content: end;
+}
+
+
+.collaborator-profile {
+  display: none;
+}
+
+
+/*Studio Body*/
+.studio-body {
+  background-color: #333;
+
+}
+
+/*Instruments & Controls*/
+.piano-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 660px;
+  height: 110px;
+  white-space: nowrap;
+  margin: 10px;
+}
+
+.keyboard {
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.key {
+  cursor: pointer;
+  font: 16px "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  border: 1px solid  black;
+  border-radius: 5px;
+  width: 20px;
+  height: 80px;
+  text-align: center;
+  box-shadow: 2px 2px darkgray;
+  display: inline-block;
+  position: relative;
+  margin-right: 3px;
+  user-select: none;
+}
+
+.key div {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  cursor: none;
+}
+
+.key div sub {
+  font-size: 10px;
+ cursor: none;
+}
+
+.key:hover {
+   background-color: #eef;
+}
+
+.key:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.octave {
+  display: inline-block;
+  padding: 0 6px 0 0 ;
+}
+
+.settingsBar {
+  padding-top: 8px;
+  font: 14px "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+  height: 30px;
+}
+
+.left {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.left span, .left input {
+  vertical-align: middle;
+}
+
+.right {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.right span {
+  vertical-align: middle;
+}
+
+.right input {
+  vertical-align: middle;
+}
+
+
+/*COLLAB PAGE END*/
+
+
+
+/* Begin notes.html */
+#myInput {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 25%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 35%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: grey;
+
+}
+
+.search-bar {
+  text-align: center;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 5px;
+
+  color: #51a4e8;
+
+  font-family: permanent-marker-pro,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+
+  background-color: aqua;
+
+
+}
+
+
+
+.notes-index-header {
+  color: yellow;
+  font-family: permanent-marker-pro,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+
+  margin-bottom: 0px;
+  margin-top: 100px;
+
+
+  text-align: center;
+}
+
+
+/*Comment Area*/
+.comment-input {
+  text-align: center;
+
+  border-color: yellow;
+  border-style: groove;
+
+}
+
+
+
+#post:hover{
+    background-color: deeppink;
+}
+
+#unordered {
+  list-style-type: square;
+  color: red;
+  background-color: black;
+}
+
+
+.discussion-forum-top {
+  background: gray;
+  border-style: groove;
+  border-color: yellow;
+  border-width: 10px;
+}
+
+
+input {
+  background-color: black;
+  color: limegreen;
+}
+
+#comment-overlay {
+  position: fixed;
+  display: none;
+  width: 50%;
+  height: 50%;
+  background-color: yellow;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Comment Overlay Style */
+
+#open-modal, #close-modal {
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+#modal {
+
+}
+
+
+
+
+
+/* Chords CSS Below here */
+
+/* Chords CSS Below here */
+
+#chordBody{
+  width: 1080px;
+  margin: 0 auto;
+}
+
+/* top middle bottom row properties */
+.boxContainers{
+  margin: 0 0 60px 0;
+  display: flex;
+  flex-wrap:wrap;
+  height: 75px;
+  padding: 10px;
+  justify-content: right;
+}
+
+/* individual box properties */
+#topRow, #midRow, #bottRow {
+  margin: 10px 10px 10px 60px;
+  width: 60px;
+  height: 40px;
+  border: 3px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 0;
+  background-color: mintcream;
+}
+
+/* background image propeties */
+#chordContainers {
+  height: 440px;
+  border-radius: 15px;
+  border: 2px solid #ddd;
+  background-image: url("./images/rowBackground.jpg");
+
+}
+#topRow{
+  position:relative; bottom:-10px;
+}
+#midRow{
+  position:relative; right:45px;
+  position:relative; bottom:-5px;
+}
+
+#bottRow{
+  position:relative; right:185px;
+  position:relative; bottom:10px;
+}
+
+#bottRow:nth-child(1) {
+  position:relative; right:300px;
+
+}
+
+/* select box */
+#rootSelect{
+  width: 55px;
+}
+
+#rootLabel{
+  background-color: #ddd;
+  border-radius: 5px;
+  padding: 2px;
+}
+/* instruction button */
+.howTo{
+  border-radius: 5px;
+  margin: 0 0 0 650px;
+}
+
+/* root select and instruction button container */
+#root{
+  border: 2px solid #ddd;
+  background-color: #333;
+  width: 1065px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 0 0 15px 0;
+}
+
+/* instruct moda;*/
+#chordInstruct {
+  background-color: #ddd;
+  width: 1080px;
+  height: 440px;
+  text-align: center;
+  border-radius: 15px;
+  font-family: permanent-marker-pro,sans-serif;
+  display: none;
+  border:2px solid #333;
+}
+
+#chordPics{
+  margin: 0 10px 10px 60px;
+  width: 90px;
+  height: 90px;
+  border: 3px solid #ddd;
+  border-radius: 5px;
+  background-color: mintcream;
+  position:relative; right:80px; bottom: 34px;
+}
+/*Chords CSS ends here*/
+
+/* About US css below here */
+.profileMain{
+  display: flex;
+}
+
+.teamIntro{
+  background-color: #444444;
+  border-radius: 5px;
+  font-size: 24px;
+  width: 275px;
+  margin: 100px auto 10px auto;
+  text-align: center;
+  border:1px solid mintcream;
+  font-family: permanent-marker-pro,sans-serif;
+}
+
+.teamTitle{
+  color: #51a4e8;
+
+}
+
+.aboutUs, .feedback{
+  min-width: 275px;
+  margin: 0 auto;
+  width: 690px;
+  color: mintcream;
+  background-color: #444444;
+  border-radius: 15px;
+  font-size: 24px;
+  text-align: center;
+  border:1px solid mintcream;
+  font-family: permanent-marker-pro,sans-serif;
+  padding: 5px;
+}
+
+#aboutUs{
+  color: #51a4e8;
+}
+
+
+
+
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 15px 0 0;
+  display: inline-block;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.submitButton {
+  width: 50%;
+  background-color: #1ce783;;
+  color:#444;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+a{
+  color: #51a4e8;
+}
+a:focus{
+  color: mintcream;
+}
+
+
