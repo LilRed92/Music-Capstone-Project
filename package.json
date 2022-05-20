@@ -4,11 +4,15 @@
   "description": "npm init package",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/LilRed92/Music-Capstone-Project.git"
+  },
+  "engines": {
+    "node": "12.17.x"
   },
   "author": "xeystrokes",
   "license": "MIT",

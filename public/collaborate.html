@@ -6,6 +6,16 @@
 	<link rel="stylesheet" href="./style.css" />
 	<link rel="stylesheet" href="./style-collab.css" />
 	<!--<script src='/node_modules/tone/build/Tone.js'></script>-->
+	<script>
+		var HOST = location.origin.replace(/^http/, 'ws')
+		var ws = new WebSocket(HOST);
+		var el;
+
+		ws.onmessage = function (event) {
+		  el = document.getElementById('server-time');
+		  el.innerHTML = 'Server time: ' + event.data;
+		};
+	</script>
 	<script src="./NexusUI.js"></script>
 	<script src="https://kit.fontawesome.com/40c0d38452.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./signup_login.css" />
