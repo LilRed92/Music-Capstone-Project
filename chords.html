@@ -1,23 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="style.css" />
-	<link rel="stylesheet" href="https://use.typekit.net/uin5qbm.css">
-	<title>Xeystroke - Home</title>
-  </head>
-	  <!--Moved the <header> into the <body> Was it showing up with it being between the <head> and <body>?-->
-  <body>
-	<header>
-		
 
-		<div class="topnav" id="myTopnav">
-		  <a href="index.html" class="active">Home</a>
-		  <a href="collaborate.html" id="collabButton">Collaborate</a>
-		  <a href="chords.html">Chord Finder</a>
-		  <a href="about.html">About</a>
-		  <a href="profile.html">Profile</a>
-		  <a href="notes.html">Notes</a>
-		</div>
-	</header>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://use.typekit.net/uin5qbm.css">
+	<style> body{ background-image: url("./images/img2.jpg");} </style>
+
+</head>
+<body>
+<header>
+	<h1>Xeystroke</h1>
+	<!-- Navbar at top -->
+	<div class="topnav" id="myTopnav">
+		<a href="index.html" class="active">Home</a>
+		<a href="collaborate.html">Collaborate</a>
+		<a href="chords.html">Chords</a>
+		<a href="notes.html">Notes</a>
+		<a href="about.html">About</a>
+	</div>
+</header>
+<div id="chordBody">
+
+	<div id=root>
+		<label id="rootLabel" for="rootSelect"> Start Here:</label>
+		<select name="root" id="rootSelect">
+			<option value="C">C</option>
+			<option value="Db">Db</option>
+			<option value="D">D</option>
+			<option value="Eb">Eb</option>
+			<option value="E">E</option>
+			<option value="Gb">Gb</option>
+			<option value="G">G</option>
+			<option value="Ab">Ab</option>
+			<option value="A">A</option>
+			<option value="Bb">Bb</option>
+			<option value="B">B</option>
+		</select>
+		<button id="imageButton" class=""> Show Diagrams </button>
+		<button id= "howTo" class="howTo">INSTRUCTIONS:</button>
+
+	</div>
+
+
+	<div id="chordContainers">
+		<div class="boxContainers" id="topChords"></div>
+		<div class="boxContainers" id="midChords"></div>
+		<div class="boxContainers" id="bottChords"></div>
+	</div>
+
+	<p id="chordInstruct">**How TO USE**
+		First select the Root Key in which you want to write/play music using the drop-down on the left.  Chords are displayed into three rows.
+		<br>
+		- MIX any chords in the MIDDLE ROW however you want.
+		<br>
+		- If you want to add a deeper sound you can move "up" to any CHORD on the TOP ROW and select another chord.  Once there you MUST follow the arrow "down" to the Middle ROW (if you want.  DO NOT MIX CHORDS ON THE TOP ROW WITH EACH OTHER.
+		<br>
+		- For an even deeper sound you may include notes on the bottom row. You may mix chords however you want. To move up follow, only one of the THREE ARROWS. If you decide to "move up" then follow the arrows to the ANY one of the three chords.
+		<br>
+		- Pay attention to the arrows and the chords they move to.
+		<br>
+		- Remember this is only a guide-line to create progressions that are guaranteed to sound awesome. Have fun and experiment.
+		<br>
+		<br>
+		<span id="example">
+		Example in key of A:
+		<br>
+		AM DM Bm Gbm -- Main Chords
+		<br>
+		Gbm B7M EM AM -- add Secondary Dominant
+		<br>
+		AM Dm EM Gbm -- add Model Interchange
+		<br>
+		DM Dbm Gbm CM -- add Sec. Dominant and Modal Interchange</span>
+		<br>
+		<button id="closeHowTo">Close</button>
+	</p>
+
+	<script src="chords.js" type="module"></script>
+
+</div>
+</body>
+
+</html>
