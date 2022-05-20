@@ -34,10 +34,10 @@ app.listen(port)
 
 
 const PORT = process.env.PORT || 3000;
-const INDEX = '/public/collaborate.html';
+const INDEX = '/public/index.html';
 
 const server = express()
-  .use((req, res) => res.sendFile(INDEX, { root: __togetherjs }))
+  .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 const { Server } = require('ws');
@@ -48,4 +48,15 @@ wss.on('connection', (ws) => {
   console.log('Client connected');
   ws.on('close', () => console.log('Client disconnected'));
 });
+
+// const io = socketIO(server);
+//
+//
+// io.on('connection', (socket) => {
+//   console.log('Client connected');
+//   socket.on('disconnect', () => console.log('Client disconnected'));
+// });
+//
+// setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
+
 
