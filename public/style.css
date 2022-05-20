@@ -321,11 +321,18 @@ body {
 =======
 
 /*COLLAB PAGE END*/
+/*=======*/
+
+/*COLLAB PAGE END*/
 
 
 
 /* Begin notes.html */
+<<<<<<< HEAD
 >>>>>>> 2e1a62fad795bf9eb70aac5f0769f297c34819a2
+=======
+
+>>>>>>> k_branch
 #myInput {
   background-position: 10px 12px;
   background-repeat: no-repeat;
@@ -355,6 +362,7 @@ body {
   text-align: left;
   padding: 5px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:style.css
   color: #51a4e8;
 =======
@@ -365,6 +373,9 @@ body {
   color: #51a4e8;
 
 >>>>>>> 2e1a62fad795bf9eb70aac5f0769f297c34819a2
+=======
+  color: #51a4e8;
+>>>>>>> k_branch
   font-family: permanent-marker-pro,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -395,6 +406,7 @@ body {
   font-style: normal;
   font-size: 50px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   margin-bottom: 0;
   margin-top: -30px;
 =======
@@ -404,6 +416,10 @@ body {
 
 
 >>>>>>> 2e1a62fad795bf9eb70aac5f0769f297c34819a2
+=======
+  margin-bottom: 0px;
+  margin-top: 100px;
+>>>>>>> k_branch
   text-align: center;
 }
 
@@ -546,6 +562,7 @@ input {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /* Chords CSS Below here */
 
@@ -621,6 +638,9 @@ input {
 
 =======
 >>>>>>> 2e1a62fad795bf9eb70aac5f0769f297c34819a2
+=======
+
+>>>>>>> k_branch
 /* root select and instruction button container */
 #root{
   border: 2px solid #ddd;
@@ -727,5 +747,8 @@ a:focus{
 /* About US css ends here */
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> 2e1a62fad795bf9eb70aac5f0769f297c34819a2
+=======
+>>>>>>> k_branch
