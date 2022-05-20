@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./style.css" />
+	<link rel="stylesheet" href="./style-collab.css" />
+	<script src='/node_modules/tone/build/Tone.js'></script>
+	<script>
+		var HOST = location.origin.replace(/^http/, 'ws')
+		var ws = new WebSocket(HOST);
+		var el;
+
+		ws.onmessage = function (event) {
+		  el = document.getElementById('server-time');
+		  el.innerHTML = 'Server time: ' + event.data;
+		};
+	</script>
+
+	<!--<script>
+		var socket = io();
+		var el;
+
+		socket.on('time', function(timeString) {
+	  	el = document.getElementById('server-time')
+	  	el.innerHTML = 'Server time: ' + timeString;
+		});
+	</script>-->
+
+	<script src="./NexusUI.js"></script>
+	<script src="https://kit.fontawesome.com/40c0d38452.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./signup_login.css" />
+	<link rel="stylesheet" href="https://use.typekit.net/uin5qbm.css">
+	<style>
+
+	@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Roboto:wght@100;300;400;700&display=swap');
+	</style>
+
+<!--***P5.JS IMPORT FOR SEQUENCER
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>-->
+
+<!--TOGETHER.JS SCRIPT FOR COLLAB-->
+	<script src="https://togetherjs.com/togetherjs-min.js"></script>
+
+<!--***NEXUSUI SCRIPT FOR AUDIO INTERFACES-->
+
+<script>
+	const audioNew = new AudioContext()
+
+</script>
+
+
+	<title>Xeystroke - Collaborate</title>
+  </head>
+
+  <body>
+	<header>
+
+
+		<div class="topnav" id="myTopnav">
+		  <a href="index.html">Home</a>
+		  <a href="collaborate.html" class= "active" id="collabButton">Collaborate</a>
+		  <a href="chords.html">Chords Finder</a>
+		  <a href="about.html">About</a>
+		  <a href="profile.html">Profile</a>
+	  <a href="notes.html">Notes</a>
+		</div>
+
+		<div class="signup-login-user">
+			<button id="signup-btn" class="account-btn">Sign Up</button>
+			<button id="login-btn" class="account-btn">Login</button>
+
+			<div id="sign-overlay" class="overlay">
+				  <div class="modal" id="signup">
+					  <button id="s-close-x" class="close-x"><i class="fa-light fa-x"></i>
+					   </button>
+				  </div>
+			  </div>
+
+			<div id="log-overlay" class="overlay">
+					  <div class="modal" id="login">
+						  <button id="l-close-x" class="close-x"><i class="fa-light fa-x"></i>
+							</button>
+						</div>
+				  </div>
+		</div>
+
+	</header>
+
+	<main>
+		<div id="studio-container" class="studio">
+
+			<div id="studio-menu" class="studio-menu">
+
+		<!--MENU DROP DOWNS-->
+				<div id="studio-dropdowns">
+					<button id="file" class="dropbtn">File
+					</button>
+					<div id="file-content" class="file-content inactive">
+					 </div>
+
+					<button id="edit" class="dropbtn">Edit
+					</button>
+					<div id="edit-content" class="edit-content inactive">
+					</div>
+
+					<button id="settingsbtn" class="dropbtn">Settings
+					</button>
+					<div id="settings-content" class="menu-settings-content inactive">
+					</div>
+				</div>
+
+
+				<div id="menu-project-info">
+					<h2 id="studio-project-name" class="project-info">[Name of Project]</h2>
+
+					<div id="studio-collaborators" class="project-info">
+						<i class="fa-solid fa-users"></i>
+						<a href="#" class="collaborator-profile">[Person One]</a>
+						<a href="#" class="collaborator-profile">[Person Two]</a>
+					</div>
+
+					<h5 id="studio-project-time" class="project-info">
+						00:00:00</h5>
+				</div>
+
+
+
+				<div id="studio-menu-btns">
+
+					<button id="start-togetherjs">Collaborate!</button>
+					<button id="undo" class="studio-menu-btn"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+
+					<button id="redo" class="studio-menu-btn"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+
+					<button id="save" class="studio-menu-btn"><i class="fa-solid fa-floppy-disk"></i></button>
+
+					<button id="download" class="studio-menu-btn"><i class="fa-regular fa-download"></i></button>
+
+					<button id="share" class="studio-menu-btn"><i class="fa-solid fa-share-nodes"></i></button>
+
+					<button id="help" class="studio-menu-btn"><i class="fa-regular fa-question"></i></button>
+
+					<button id="exit" class="studio-menu-btn"><i class="fa-regular fa-person-to-portal"></i></button>
+				</div>
+
+			</div>
+
+			<div id="audioFileListContainer" class="user-files-container">
+				<form id="filesDropArea" class="user-file-list">
+					<i class="fa-solid fa-plus"></i><i class="fa-regular fa-file-waveform"></i>
+					<p>Drop some audio files in, or use the button below to upload your files.</p>
+					  <input type="file" id="soundFile" accept="audio/*">
+					  <button type="submit">Import</button>
+				</form>
+			</div>
+
+			<div id="studio-main" class="studio-body">
+
+		<!--TRACKS ON DECK-->
+				<div id="top-interface">
+
+				<div id="tracksDropArea" class="tracks-files-list">
+					<div id="emptyTracks" class="no-loaded-tracks">
+						<h6>Load your first track!</h6>
+					</div>
+
+					<div id="deckTracks" class="tracks">
+
+						<div id="first-track" class="track-one"></div>
+						<div id="second-track" class="track-two"></div>
+						<div id="third-track" class="track-three"></div>
+						<div id="fourth-track" class="track-four"></div>
+						<div id="fifth-track" class="track-five"></div>
+						<div id="sixth-track" class="track-six"></div>
+						<div id="seventh-track" class="track-seven"></div>
+						<div id="eighth-track" class="track-eight"></div>
+
+					</div>
+				</div>
+				<div class="ctrls" id="ctrlsBar">
+					<div class="audio-ctrls">
+						<div id="volume">
+							<span><i class="fa-light fa-volume"></i></span>
+							<input type="range" min="0.0" max="1.0" step="0.01" value="0.5" list="volumes" name="volume">
+							<datalist id="volumes">
+								<option value="0.0" label="Mute"></option>
+								<option value="1.0" label="100%"></option>
+							</datalist>
+						</div>
+
+						<div id="song-ctrl-btns">
+
+							<button id="record" class="ctrls-btn">
+								<i class="fa-solid fa-microphone"></i>
+							</button>
+							<button id="play" class="ctrls-btn">
+								<i class="fa-solid fa-play"></i>
+							</button>
+							<button id="pause" class="ctrls-btn">
+								<i class="fa-regular fa-pause"></i>
+							</button>
+							<button id="stop" class="ctrls-btn">
+								<i class="fa-solid fa-stop"></i>
+							</button>
+							<button id="save-btn" class="ctrls-btn">
+								<i class="fa-solid fa-floppy-disk"></i>
+							</button>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+
+		<!--INSTRUMENT CONTROLS-->
+				<div id="bottom-interface">
+
+					<div class="instrument-item instrument-item-visible" id="piano">
+						<h3>Synth Piano</h3>
+						<div class="piano-scroll" id="pianoScroll">
+							<!--<button class="dwn-octave-arrows inactive" id="dwnOctaveArrows">
+								<i class="fa-solid fa-arrow-left"></i>
+							</button>-->
+
+							<div class="keyboardContainer" id="keyboardDiv"></div>
+
+							<!--<button class="up-octave-arrows inactive" id="upOctaveArrows">
+								<i class="fa-solid fa-arrow-right"></i>
+							</button>-->
+						</div>
+					</div>
+
+
+					<div class="instrument-item" id="sequencer">
+					<h3>Sequencer</h3>
+					<div id="sequencer-container" class="sequencer-pad">
+						<div id="sequencer-canvas" class="seq-canvas"></div>
+					</div>
+				</div>
+
+					<div id="settings">
+						<div class="settingsElems">
+					<!--Main Controls-->
+							<div id="mainSettingsContainer">
+								<h6>Main</h6>
+
+								<div class="mainGainContainer containers-settings">
+									<label for="mainGainSlider">
+										Main Gain
+									</label>
+									<br>
+									<input type="range" min="0" max="1" value="0.1" step="0.01" class="slider" id="mainGainSlider">
+								</div>
+
+								<div class="bpmContainer containers-settings">
+									<label for="bpmSlider">
+										BPM
+									</label>
+									<br>
+									<input type="range" min="60" max="160" value="120" step="1" class="slider" id="bpmSlider">
+									<div class="bpmDisplayText" id="bpmDisplay">
+									</div>
+								</div>
+
+								<div class="pitchBendSettingsContainer containers-settings">
+									<label for="pitchBendSlider">
+										Pitch Bend
+									</label>
+									<br>
+									<input type="range" min="0" max="1" value="0.5" step="0.01" class="slider" id="pitchBendSlider">
+								</div>
+
+								<div class="bendRangeSliderContainer containers-settings">
+									<label for="bendRangeSlider">
+										Bend Range
+									</label>
+									<br>
+									<input type="range" min="0" max="12" value="2" class="slider" id="bendRangeSlider">
+								</div>
+
+							</div>
+
+						<!--Amp Envelope-->
+
+							<div class="ampEnvelopeContainer">
+								<h6>Amp Envelope</h6>
+
+									<div class="attackSliderContainer containers-settings">
+										<label for="attackSlider">
+											Attack
+										</label>
+										<br>
+										<input type="range" min="0" max="1" value="0.01" step="0.01" class="slider" id="attackSlider">
+									</div>
+
+									<div class="decaySliderContainer containers-settings" >
+										<label for="decaySlider">
+											Decay
+										</label>
+										<br>
+										<input type="range" min="0" max="1" value="0.3" step="0.01" class="slider" id="decaySlider">
+									</div>
+
+									<div class="sustainSliderContainer containers-settings" >
+										<label for="sustainSlider">
+											Sustain
+										</label>
+										<br>
+										<input type="range" min="0" max="1" value="1" step="0.01" class="slider" id="sustainSlider">
+									</div>
+
+									<div class="releaseSliderContainer containers-settings" >
+										<label for="releaseSlider">
+											Release
+										</label>
+										<br>
+										<input type="range" min="0" max="1" value="0.25" step="0.01" class="slider" id="releaseSlider">
+									</div>
+
+							</div>
+
+						<!--Filter-->
+
+							<div class="filterSettingsContainer">
+								<h6>Filter</h6>
+
+									<div class="filterCutSliderContainer containers-settings">
+										<label for="filterCutSlider">
+											Cut
+										</label>
+										<br>
+										<input type="range" min="0" max="1" value="0.75" step="0.01" class="slider" id="filterCutSlider">
+									</div>
+
+									<div class="filterResSliderContainer containers-settings">
+										<label for="filterResSlider">
+											Res
+										</label>
+										<br>
+										<input type="range" min="0" max="1" value="0.25" step="0.01" class="slider" id="filterResSlider">
+									</div>
+
+									<div class="mainFilterLfoModSliderContainer containers-settings">
+										<label for="mainFilterLfoModSlider">
+											Mod
+										</label>
+										<br>
+										<input type="range" min="0" max="1" value="0.25" step="0.01" class="slider" id="mainFilterLfoModSlider">
+									</div>
+
+									<div class="mainFilterLfoRateSliderContainer containers-settings">
+										<label for="mainFilterLfoRateSlider">
+											Rate
+										</label>
+										<br>
+										<input type="range" min="0" max="1" value="0.25" step="0.01" class="slider" id="mainFilterLfoRateSlider">
+									</div>
+							</div>
+
+							<div id="sync-retrig" class="containers-settings">
+
+								<div class="mainFilterSyncCheboxContainer">
+									<label for="mainFilterSyncCheckbox">
+										Sync
+									</label>
+									<br>
+									<input type="checkbox" id="mainFilterSyncCheckbox" class="checkbox">
+									<span class="checkmarkMainFilterSync"></span>
+								</div>
+
+								<div class="mainFilterRetrigCheboxContainer">
+									<label for="mainFilterRetrigCheckbox">
+										Retrig
+									</label>
+									<br>
+									<input type="checkbox" id="mainFilterRetrigCheckbox" class="checkbox">
+									<span class="checkmarkMainFilterRetrig"></span>
+								</div>
+
+							</div>
+
+						<!--Delay-->
+
+							<div class="delaySettingsContainer">
+									<h6>Delay</h6>
+
+								<div class="delayTimeSliderContainer containers-settings">
+									<label for="delayTimeSlider">
+										Time
+									</label>
+									<br>
+									<input type="range" min="0" max="18" value="5" step="1" class="slider" id="delayTimeSlider">
+								</div>
+
+								<div class="delayFbSliderContainer containers-settings">
+									<label for="delayFbSlider">
+										FB
+									</label>
+									<br>
+									<input type="range" min="0" max="1" value="0.75" step="0.01" class="slider" id="delayFbSlider">
+								</div>
+
+								<div class="delayWetSliderContainer containers-settings">
+									<label for="delayWetSlider">
+										Wet
+									</label>
+									<br>
+									<input type="range" min="0" max="1" value="0.5" step="0.01" class="slider" id="delayWetSlider">
+								</div>
+
+								</div>
+
+					<!--MIDI Settings-->
+
+							<div class="midiSettingsContainer containers-settings">
+
+								<div class="midi-select" style="width:45px;">
+										<select id="midiDevicesSelector">
+											<option value="0">1</option>
+											<option value="1">2</option>
+											<option value="2">3</option>
+											<option value="3">4</option>
+											<option value="4">5</option>
+										</select>
+								</div>
+
+								<div class="midiMonitorDisplayContainer" id="midiMonitorDisplay">
+								<h6>Midi Monitor</h6>
+								</div>
+
+
+
+								<label for="midiLearnCheckbox">Learn</label>
+									<input type="checkbox" id="midiLearnCheckbox" class="checkbox">
+									<span class="checkmarkMidiLearn"></span>
+
+
+
+
+								<label for="velocityOnCheckbox">Velocity</label>
+									<input id="velocityOnCheckbox" type="checkbox" class="checkbox">
+									<span class="checkmarkVelocity"></span>
+
+
+							</div>
+						</div>
+					</div>
+
+					<!--<div class="instruments-actions">
+					  <button id="instruments-button-prev" aria-label="PianoSynth"><i class="fa-regular fa-angles-left"></i></button>
+
+					  <button id="instruments-button-next" aria-label="Sequencer"><i class="fa-regular fa-angles-right"></i></button>
+					</div>-->
+
+				</div>
+
+			</div>
+
+		</div>
+	</main>
+
+	<script src="script.js"></script>
+	<script>
+	let defaultConfiguration = {
+		cloneClicks: true,
+		getUserName: true,
+		useMinimizedCode: true,
+		toolName: "Xeystroke's Collab Tool",
+		suppressInvite: true
+	}
+	</script>
+  </body>
+</html>
