@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Sign Up-Login</title>
+	<link href="signup_login.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://use.typekit.net/uin5qbm.css">
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Roboto:wght@100;300;400;700&display=swap');
+	</style>
+	<script src="https://kit.fontawesome.com/40c0d38452.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+	  <button id="signup-btn" class="account-btn">Sign Up</button>
+	  <button id="login-btn" class="account-btn">Login</button>
+
+	<div id="overlay">
+		<div class="modal" id="signup">
+
+			<button id="close-x"><i class="fa-light fa-x"></i>
+			</button>
+
+			<div class="box" id="title">
+				<h1>Create your account!</h1>
+			  </div>
+
+			<form class="accountForm" method="post" action="/users">
+
+				<div class="form-entries">
+					<div class="tab">
+						<div class="box" id="nameFirst">
+							<label>First name:</label>
+							<input name="firstName" id="first"/>
+				    	</div>
+
+				 		<div class="box" id="nameLast">
+							<label>Last name:</label>
+							<input name="lastName" id="last"/>
+	  					</div>
+					</div>
+
+					<div class="tab">
+						<div class="box" id="dob">
+					 		<label>D.O.B</label>
+					 		<input name="dateOfBirth" id="dateOfBirth"/>
+				 		</div>
+
+	  					<div class="box" id="emailAddress">
+							<label>Email:</label>
+							<input name="email" id="email"/>
+	  					</div>
+					</div>
+
+					<div class="tab">
+	  					<div class="box" id="usernameAdd">
+							<label>Username:</label>
+							<input name="username" id="username"/>
+	  					</div>
+
+	  					<div class="box" id="passwordAdd">
+		  					<label>Password:</label>
+		  					<input name="password" id="password"/>
+							</div>
+					</div>
+
+					<div class="tab">
+						<a href="privacy-policy.html">Privacy Policy</a>
+					</div>
+				</div>
+
+	  			<div id="submit">
+					<button id="submit-btn">Sign up!</button>
+	  			</div>
+
+			</form>
+		</div>
+	</div>
+	<script src="script.js"></script>
+  </body>
+</html>
