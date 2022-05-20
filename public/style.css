@@ -207,12 +207,7 @@ body {
   display: none;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD:style.css
-=======
-=======
 
->>>>>>> 2e1a62fad795bf9eb70aac5f0769f297c34819a2
 /*Studio Body*/
 .studio-body {
   background-color: #333;
@@ -314,18 +309,16 @@ body {
   vertical-align: middle;
 }
 
-<<<<<<< HEAD
->>>>>>> k_branch:public/style.css
+
 /*COLLAB PAGE END*/
 /*=======*/
-=======
 
 /*COLLAB PAGE END*/
 
 
 
 /* Begin notes.html */
->>>>>>> 2e1a62fad795bf9eb70aac5f0769f297c34819a2
+
 #myInput {
   background-position: 10px 12px;
   background-repeat: no-repeat;
@@ -354,17 +347,7 @@ body {
 #myTable th, #myTable td {
   text-align: left;
   padding: 5px;
-<<<<<<< HEAD
-<<<<<<< HEAD:style.css
   color: #51a4e8;
-=======
-  color: #1ce783;
->>>>>>> k_branch:public/style.css
-=======
-
-  color: #51a4e8;
-
->>>>>>> 2e1a62fad795bf9eb70aac5f0769f297c34819a2
   font-family: permanent-marker-pro,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -394,16 +377,8 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 50px;
-<<<<<<< HEAD
-  margin-bottom: 0;
-  margin-top: -30px;
-=======
-
   margin-bottom: 0px;
   margin-top: 100px;
-
-
->>>>>>> 2e1a62fad795bf9eb70aac5f0769f297c34819a2
   text-align: center;
 }
 
@@ -545,82 +520,7 @@ input {
   margin: 0 0 0 650px;
 }
 
-<<<<<<< HEAD
 
-/* Chords CSS Below here */
-
-/* Chords CSS Below here */
-
-#chordBody{
-  width: 1080px;
-  margin: 0 auto;
-}
-
-/* top middle bottom row properties */
-.boxContainers{
-  margin: 0 0 60px 0;
-  display: flex;
-  flex-wrap:wrap;
-  height: 75px;
-  padding: 10px;
-  justify-content: right;
-}
-
-/* individual box properties */
-#topRow, #midRow, #bottRow {
-  margin: 10px 10px 10px 60px;
-  width: 60px;
-  height: 40px;
-  border: 3px solid #ddd;
-  border-radius: 5px;
-  text-align: center;
-  padding: 10px 0;
-  background-color: mintcream;
-}
-
-/* background image propeties */
-#chordContainers {
-  height: 440px;
-  border-radius: 15px;
-  border: 2px solid #ddd;
-  background-image: url("./images/rowBackground.jpg");
-}
-#topRow{
-  position:relative; bottom:-10px;
-}
-#midRow{
-  position:relative; right:45px;
-  position:relative; bottom:-5px;
-}
-
-#bottRow{
-  position:relative; right:185px;
-  position:relative; bottom:10px;
-}
-
-#bottRow:nth-child(1) {
-  position:relative; right:300px;
-
-}
-
-/* select box */
-#rootSelect{
-  width: 55px;
-}
-
-#rootLabel{
-  background-color: #ddd;
-  border-radius: 5px;
-  padding: 2px;
-}
-/* instruction button */
-.howTo{
-  border-radius: 5px;
-  margin: 0 0 0 650px;
-}
-
-=======
->>>>>>> 2e1a62fad795bf9eb70aac5f0769f297c34819a2
 /* root select and instruction button container */
 #root{
   border: 2px solid #ddd;
@@ -723,9 +623,4 @@ a{
 a:focus{
   color: mintcream;
 }
-<<<<<<< HEAD
-/* About US css ends here */
-=======
 
-
->>>>>>> 2e1a62fad795bf9eb70aac5f0769f297c34819a2
