@@ -1,0 +1,3 @@
+[submodule "togetherjs"]
+	path = togetherjs
+	url = https://github.com/LilRed92/togetherjs.git
