@@ -35,10 +35,12 @@ app.listen(port)
 
 const PORT = process.env.PORT || 3000;
 const INDEX = '/public/collaborate.html';
-const __dirname = '/togetherjs/hub/'
+//const __dirname = '/togetherjs/hub/'
 const server = express()
   .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+  console.log(server)
 
 const { Server } = require('ws');
 
@@ -49,6 +51,7 @@ wss.on('connection', (ws) => {
   ws.on('close', () => console.log('Client disconnected'));
 });
 
+console.log(server({server}))
 // const io = socketIO(server);
 //
 //
