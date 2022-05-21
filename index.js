@@ -34,8 +34,8 @@ app.listen(port)
 
 
 const PORT = process.env.PORT || 3000;
-const INDEX = '/public/index.html';
-
+const INDEX = '/public/collaborate.html';
+const __dirname = '/togetherjs/hub/'
 const server = express()
   .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
